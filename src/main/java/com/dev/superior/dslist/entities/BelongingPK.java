@@ -7,7 +7,7 @@ import jakarta.persistence.ManyToOne;
 import java.util.Objects;
 
 @Embeddable
-public class BelogingPK {
+public class BelongingPK {
     @ManyToOne
     @JoinColumn(name = "game_id")
     private Game game;
@@ -20,7 +20,7 @@ public class BelogingPK {
         return game;
     }
 
-    public BelogingPK(Game game, GameList list) {
+    public BelongingPK(Game game, GameList list) {
         this.game = game;
         this.list = list;
     }
@@ -41,7 +41,7 @@ public class BelogingPK {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        BelogingPK that = (BelogingPK) o;
+        BelongingPK that = (BelongingPK) o;
         return Objects.equals(game, that.game) && Objects.equals(list, that.list);
     }
 
@@ -50,7 +50,7 @@ public class BelogingPK {
         return Objects.hash(game, list);
     }
 
-    public BelogingPK() {
+    public BelongingPK() {
 
     }
 }
